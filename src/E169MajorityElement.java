@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class E169MajorityElement {
@@ -14,5 +15,11 @@ public class E169MajorityElement {
             }
         }
         return nums[nums.length - 1];
+    }
+
+    public int majorityElementA(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        return nums[n/2];
     }
 }
