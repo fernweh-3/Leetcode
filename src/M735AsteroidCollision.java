@@ -5,29 +5,27 @@ public class M735AsteroidCollision {
 
 
     public static int[] asteroidCollision(int[] asteroids) {
-        int n = asteroids.length;
-        Stack<Integer> s = new Stack<>();
-        for (int i = 0; i < n; i++) {
-            if (asteroids[i] > 0 || s.isEmpty()) {
-                s.push(asteroids[i]);
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < asteroids.length; i++) {
+            if (stack.isEmpty() || asteroids[i] > 0) {
+                stack.push(asteroids[i]);
             } else {
-                while (!s.isEmpty() && s.peek() > 0 && s.peek() < Math.abs(asteroids[i])) {
-                    s.pop();
+                while (!stack.isEmpty() && asteroids[i] < 0 && stack.peek() < Math.abs(asteroids[i])) {
+                    stack.pop();
                 }
-                if (!s.isEmpty() && s.peek() == Math.abs(asteroids[i])) {
-                    s.pop();
-                } else {
-                    if (s.isEmpty() || s.peek() < 0) {
-                        s.push(asteroids[i]);
-                    }
+                if (!stack.isEmpty() && asteroids[i] < 0 && stack.peek() == Math.abs(asteroids[i])) {
+                    stack.pop();
+                } else if (stack.isEmpty() || asteroids[i] > 0) {
+                    stack.push(asteroids[i]);
                 }
             }
         }
-        int[] res = new int[s.size()];
-        for (int i = s.size() - 1; i >= 0; i--) {
-            res[i] = s.pop();
+
+        int[] result = new int[stack.size() - 1];
+        for (int i = stack.size() - 1; i >= 0; i--) {
+            result[i] = stack.pop();
         }
-        return res;
+        return result;
     }
 
 }
