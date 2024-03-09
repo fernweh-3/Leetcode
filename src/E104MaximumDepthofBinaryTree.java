@@ -1,41 +1,9 @@
-import javax.swing.tree.TreeNode;
+
 import java.util.Stack;
 
 public class E104MaximumDepthofBinaryTree {
-    /**
-     * Definition for a binary tree node.
-     * //     * public class TreeNode {
-     * //     * int val;
-     * //     * TreeNode left;
-     * //     * TreeNode right;
-     * //     * TreeNode() {}
-     * //     * TreeNode(int val) { this.val = val; }
-     * //     * TreeNode(int val, TreeNode left, TreeNode right) {
-     * //     * this.val = val;
-     * //     * this.left = left;
-     * //     * this.right = right;
-     * //     * }
-     * }
-     */
     class Solution {
-        class TreeNode {
-            int val;
-            TreeNode left;
-            TreeNode right;
 
-            TreeNode() {
-            }
-
-            TreeNode(int val) {
-                this.val = val;
-            }
-
-            TreeNode(int val, TreeNode left, TreeNode right) {
-                this.val = val;
-                this.left = left;
-                this.right = right;
-            }
-        }
 
         public int maxDepthRecursive(TreeNode root) {
             if (root == null) {
