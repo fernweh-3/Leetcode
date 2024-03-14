@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class M394DecodeString {
-    public static String decodeString(String s) {
+    public String decodeString(String s) {
 
         Stack<Integer> nums = new Stack<>();
         Stack<String> strs = new Stack<>();
@@ -35,7 +35,4 @@ public class M394DecodeString {
     }
 
 
-    public static void main(String[] args) {
-        System.out.println(decodeString("3[a2[c]]"));
-    }
 }
