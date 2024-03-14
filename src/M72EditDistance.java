@@ -3,7 +3,7 @@ public class M72EditDistance {
         int l1 = word1.length();
         int l2 = word2.length();
 
-        int[] arr1 =
+        return 1;
 
     }
 }
