@@ -28,5 +28,29 @@ public class FindNumberswithEvenNumberofDigits {
      * 1 <= nums.length <= 500
      * 1 <= nums[i] <= 105
      */
+    public int findNumbers(int[] nums) {
+        int count = 0;
+        for (int num : nums){
+            String numStr = String.valueOf(num);
+            if (numStr.length() % 2 == 0){
+                count++;
+            }
+        }
+        return count;
+    }
 
+    /**
+     * (int)(Math.log10(nums[i])+1) is the number of digits in nums[i]
+     * In Java, there are several ways to convert an `int` to a `String`.
+     *
+     * ### 1. Using `String.valueOf(int)`
+     *
+     * ### 2. Using `Integer.toString(int)`
+     *
+     * ### 3. Using String concatenation
+     * String str = number + "";
+     *
+     * ### 4. Using `String.format()`
+     * String str = String.format("%d", number);
+     */
 }
