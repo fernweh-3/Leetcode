@@ -1,3 +1,4 @@
+
 def isPalindrome(self, s: str) -> bool:
     l, r = 0, len(s) - 1
     while l < r:
@@ -10,8 +11,7 @@ def isPalindrome(self, s: str) -> bool:
         l, r = l + 1, r - 1
     return True
 
-
- def alphaNum(self, c):
+def alphaNum(self, c: str) -> bool:
     return (ord('A') <= ord(c) <= ord('Z') or
             ord('a') <= ord(c) <= ord('z') or
             ord('0') <= ord(c) <= ord('9'))
