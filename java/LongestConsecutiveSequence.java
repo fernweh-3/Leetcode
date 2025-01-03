@@ -1,8 +1,10 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class LongestConsecutiveSequence {
-    public int longestConsecutive(int[] nums) {
+    public int longestConsecutive1(int[] nums) {
         Set<Integer> numSet = new HashSet<>();
         for (int num : nums) {
             numSet.add(num);
@@ -22,9 +24,19 @@ public class LongestConsecutiveSequence {
         return longest;
     }
 
-    public static void main(String[] args) {
-        LongestConsecutiveSequence lcs = new LongestConsecutiveSequence();
-        int[] nums = {100, 4, 200, 1, 3, 2};
-        System.out.println(lcs.longestConsecutive(nums));
+    public int longestConsecutive2(int[] nums) {
+        Map<Integer, Integer> mp = new HashMap<>();
+        int res = 0;
+
+        for (int num : nums) {
+            if (!mp.containsKey(num)) {
+                mp.put(num, mp.getOrDefault(num - 1, 0) + mp.getOrDefault(num + 1, 0) + 1);
+                mp.put(num - mp.getOrDefault(num - 1, 0), mp.get(num));
+                mp.put(num + mp.getOrDefault(num + 1, 0), mp.get(num));
+                res = Math.max(res, mp.get(num));
+            }
+
+        }
+        return res;
     }
 }
