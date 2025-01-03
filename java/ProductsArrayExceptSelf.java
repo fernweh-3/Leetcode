@@ -1,5 +1,5 @@
 public class ProductsArrayExceptSelf {
-    public int[] productExceptSelf(int[] nums) {
+    public int[] productExceptSelf1(int[] nums) {
         int product = 1, zeroCount = 0;
         for (int num: nums){
             if (num != 0) {
@@ -23,7 +23,7 @@ public class ProductsArrayExceptSelf {
         return res;
     }
 
-    public int[] productExceptSelf(int[] nums) {
+    public int[] productExceptSelf2(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];
 

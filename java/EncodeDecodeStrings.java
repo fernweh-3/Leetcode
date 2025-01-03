@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class EncodeDecodeStrings {
     public String encode(List<String> strs) {
         StringBuilder res = new StringBuilder();

@@ -1,19 +1,21 @@
+import java.util.ArrayList;
+
 // Singly Linked List Node
-class ListNode {
-    int val;
-    ListNode next;
-
-    // Constructor that sets 'next' to null by default
-    public ListNode(int val) {
-        this(val, null);
-    }
-
-    // Constructor that accepts both value and next node
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+//class ListNode {
+//    int val;
+//    ListNode next;
+//
+//    // Constructor that sets 'next' to null by default
+//    public ListNode(int val) {
+//        this(val, null);
+//    }
+//
+//    // Constructor that accepts both value and next node
+//    public ListNode(int val, ListNode next) {
+//        this.val = val;
+//        this.next = next;
+//    }
+//}
 
 // Implementation for Singly Linked List
 class LinkedList {
