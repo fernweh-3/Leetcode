@@ -1,4 +1,5 @@
 public class E680ValidPalindromeII {
+// should use "or" instead of moving just one side of the pointer
     public boolean validPalindrome(String s) {
         int left = 0;
         int right =  s.length()  - 1;
