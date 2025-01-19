@@ -18,3 +18,13 @@ def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
                 count+=1
     res.append(0)
     return res
+
+def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+    res = [0]*len(temperatures)
+    stack = []
+    for idx, temp in enumerate(temperatures):
+        while stack and temp>stack[-1][0]:
+            t, i = stack.pop()
+            res[i] = idx - i
+        stack.append((temp, idx))
+    return res
