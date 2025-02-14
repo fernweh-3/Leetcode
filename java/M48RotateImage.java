@@ -3,6 +3,7 @@ public class M48RotateImage {
         // transpose
         for(int i= 0; i < matrix.length; i++){
             for (int j = i; j< matrix[i].length; j++){
+                //only iterate over the upper triangle (j > i). Otherwise, it will swap back
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
