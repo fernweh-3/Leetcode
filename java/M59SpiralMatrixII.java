@@ -1,4 +1,4 @@
-public class N59SpiralMatrixII {
+public class M59SpiralMatrixII {
     public int[][] generateMatrix(int n) {
         int row = n - 1;
         int col = n - 1;
