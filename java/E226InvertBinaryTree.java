@@ -1,5 +1,4 @@
 public class E226InvertBinaryTree {
-     *
 
     public class TreeNode {
         int val;
