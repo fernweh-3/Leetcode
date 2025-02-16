@@ -43,4 +43,3 @@ public class M155MinStack {
  * int param_3 = obj.top();
  * int param_4 = obj.getMin();
  */
-}
