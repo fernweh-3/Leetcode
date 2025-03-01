@@ -7,6 +7,7 @@ public class M287FindDuplicateNumber {
             }
             nums[idx] *= -1;
         }
+
         return -1;
     }
 
